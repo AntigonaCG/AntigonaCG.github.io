@@ -1,0 +1,91 @@
+body {
+    text-align: center;
+    padding: 5%;
+    font-family:sans-serif;
+    background-color: #F1EDE4;
+   
+}
+.cabecera {
+    display: grid; 
+    grid-template-columns: auto auto; 
+    font-size: 1.5em; 
+    color: #2F2E2B;
+    
+}
+.titulo{
+    text-align: left;
+
+}
+.zeus{
+    text-align: right; 
+    font-size: 0.8em;
+    border-top: 2px solid #2F2E2B;
+    border-right: 2px solid #2F2E2B;
+    padding: 2%; 
+}
+
+#atenea {
+
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #2F2E2B;
+     color: #F1EDE4; 
+
+}
+
+.ceres { 
+    padding: 5%;
+    border-left: 2px solid #F1EDE4; 
+    border-bottom: 2px solid #F1EDE4; 
+
+}
+
+#persefone img {
+    width: 100%; 
+    cursor: pointer; 
+}
+
+.ceres: hover {
+    opacity: 50%; 
+}
+
+.diana {
+
+    display: grid;
+    text-align: center; 
+    justify-items: center;
+    padding: 10%;
+    color: #F1EDE4;
+}
+
+
+
+button {
+
+    margin-bottom: 5%;
+    padding: 2%;
+    font-size: 1.2em;
+    background-color: #F1EDE4;
+    color: #2F2E2B;
+    border-radius: 2em;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-image: url(img/viejo-fondo-textura-papel-carton-reciclado-marron_293060-15824.jpg);
+
+}
+footer{
+    text-align: right}
+
+@media screen and (max-width: 600px) {
+    #atenea:not(:first-child) {
+         float: right;
+        display: block;;
+    
+
+/*meter responsive*/
+/*todos los elemntos en html: 7elm*/
+/*alinear*/
