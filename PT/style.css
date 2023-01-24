@@ -1,0 +1,376 @@
+/*SCROLL*/
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+/*HAMBURGUESA*/
+
+.hamburguesa {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #fff;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    margin-left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: border-left:;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: #830307;
+}
+
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #fff;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+/*FONDO*/
+
+body {
+    background-color: black;
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0;
+    width: 100%; 
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    padding-top: 2%;
+    cursor: pointer;
+
+}
+
+.articulo {
+    padding: 10%;
+    text-align: left;
+    cursor: pointer;
+
+}
+
+.articulo img {
+    display: grid;
+    width: 90%;
+    justify-items: center;
+    align-items: center;
+}
+
+h2 {
+
+    font-size: 2em;
+}
+
+/*PRIMERA SECCIÓN*/
+
+#primera {
+
+    display: flex;
+    padding: 0% 10% 0% 10%;
+    column-gap: 4%;
+    margin-top: 4%;
+
+}
+
+
+.azul {
+
+    border-top: 1.5px solid #3C4D9B;
+    border-left: 1.5px solid #3C4D9B;
+    border-right: 1.5px solid #3C4D9B;
+}
+
+.blanco {
+
+    border-top: 1.5px solid #fff;
+    border-left: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+}
+
+.rojo {
+
+    border-top: 1.5px solid #830307;
+    border-left: 1.5px solid #830307;
+    border-right: 1.5px solid #830307;
+}
+
+/*SEGUNDA SECCIÓN*/
+
+#segunda {
+
+    display: flex;
+    padding: 0% 10% 0% 10%;
+    column-gap: 4%;
+    background-image: url(img/opacidad.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+.azuldos {
+
+    border-bottom: 1.5px solid #3C4D9B;
+    border-left: 1.5px solid #3C4D9B;
+    border-right: 1.5px solid #3C4D9B;
+}
+
+.blancodos {
+
+    border-bottom: 1.5px solid #fff;
+    border-left: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+}
+
+.rojodos {
+
+    border-bottom: 1.5px solid #830307;
+    border-left: 1.5px solid #830307;
+    border-right: 1.5px solid #830307;
+}
+
+#segunda img {
+    width: 90%;
+    margin-top: 250%;
+    margin-left: 10%;
+}
+
+
+
+/*SUSCRIBIR Hilos*/
+
+
+.cajauno {
+    position: absolute;
+    background-image: url(img/Suscribir2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-right: 96%;
+    z-index: 1;
+    opacity: 60%;
+    margin-top: 50%;
+
+}
+
+/*retocar la foto. Sale muy pixelada*/
+
+.botoncito {
+    background-color: #fff;
+    color: red;
+    border-radius: 3em;
+    height: 100px;
+    padding: 22%;
+    margin: 50%;
+    margin-bottom: 50%;
+    font-weight: bold;
+    text-decoration: none;
+
+
+}
+
+
+/*SUSCRIBIR Vogue*/
+
+#suscribir {
+    background-image: url(img/Moda2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30%;
+    display: grid;
+    align-content: center;
+    margin: inherit;
+
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 5%;
+    justify-items: center;
+
+}
+
+#botonarte {
+    color: 3C4D9B;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 40px;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    color: blue;
+    font-size: 2em;
+}
+
+#botondiseno {
+    background-color: black;
+    text-decoration: none;
+    border-radius: 40px;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+}
+
+#botonmoda {
+    background-color: black;
+    text-decoration: none;
+    border-radius: 40px;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    color: red;
+    font-size: 2em;
+}
+
+/*BAUHAUS*/
+
+#block {
+    position: relative;
+    margin: 0 auto 10%;
+    width: 500px;
+    height: 550px;
+    background-image: url(img/Group%2027.png);
+    cursor: pointer;
+}
+
+#block:before,
+#block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, red, white, blue, yellow, red, white,
+            blue, yellow, red, white);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/*Footer*/
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding-top: 2%;
+   cursor: pointer;
+
+}
